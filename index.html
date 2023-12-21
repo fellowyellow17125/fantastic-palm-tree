@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Highcharts library using CDN -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <title>Internships by Industry</title>
+</head>
+<body>
+
+<!-- Your chart container -->
+<div id="chart-container" style="width: 600px; height: 400px;"></div>
+
+<!-- Your chart script -->
+<script src="data.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Highcharts.chart('chart-container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: '2023 Metcalf Internships by Industry'
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Percent'
+                }
+            },
+            series: [{
+                name: 'Percent',
+                data: chartData
+            }]
+        });
+    });
+</script>
+
+</body>
+</html>
