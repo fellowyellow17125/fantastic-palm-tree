@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add Highcharts library using CDN -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- Add data.js script -->
+    <script src="data.js"></script>
     <title>Internships by Industry</title>
 </head>
 <body>
@@ -13,7 +15,6 @@
 <div id="chart-container" style="width: 600px; height: 400px;"></div>
 
 <!-- Your chart script -->
-<script src="data.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         Highcharts.chart('chart-container', {
